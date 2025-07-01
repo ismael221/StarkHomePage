@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          Liberation Mono, Courier New, monospace;
+      }
+      ul {
+        list-style: none;
+      }
+      .nav-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .item {
+        width: 80px;
+        color: #381fd1;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #f6f6eb;
+        padding: 10px;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
+
+      aside {
+        width: 25%;
+        height: 600px;
+      }
+
+      article {
+        width: 75%;
+        display: flex;
+      }
+
+      footer {
+        background-color: #11284b;
+        color: #f3f2fc;
+        clear: both;
+      }
+
+      .aside-content {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .free-trial{
+        background-color: #381fd1;
+        color: #f3f2fc;
+        border: none;
+        width: 200px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 13px;
+        height: 24px;
+      }
+
+      .link-button{
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-container">
+        <li class="item">PRODUCT</li>
+        <li class="item">PRICING</li>
+        <li class="item">BLOG</li>
+        <li class="item">LIBRARY</li>
+        <li class="item">SUPPORT</li>
+        <li class="item">LOG IN</li>
+        <li class="item "><button class="free-trial"><a class="link-button">30-DAY FREE TEAM TRIAL</a></button></li>
+      </ul>
+    </nav>
+
+    <main>
+      <aside>
+        <div class="aside-content">
+          <h4>Search Library</h4>
+        </div>
+      </aside>
+
+      <article class="first">
+        <div class="article-title">
+          <h2>New in the Library</h2>
+          <span><a href="#">VIEW ALL</a></span>
+          <p>Newly added accessibility resources, guides and more.</p>
+        </div>
+      </article>
+
+      <article class="second">
+        <div class="article-title">
+          <h2>Featured Collections</h2>
+          <span><a href="#">VIEW ALL</a></span>
+
+          <p>Handpicked and curated collections around accessibility</p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <h1>Made remotely with love by Stark Lab, Inc.</h1>
+      <div class="container">
+        <div class="product">
+          <h2>PRODUCT</h2>
+          <ul class="product-list">
+            <li>Stark for Figma</li>
+            <li>Stark for FigJam</li>
+            <li>Stark for Sketch</li>
+            <li>Stark for Chrome</li>
+            <li>Stark for Firefox</li>
+            <li>Stark for Edge</li>
+            <li>Stark for Safari</li>
+            <li>Stark for Arc</li>
+            <li>Stark for Brave</li>
+          </ul>
+        </div>
+        <div class="resources">
+          <h2>RESOURCES</h2>
+          <ul class="resources-list">
+            <li>Blog</li>
+            <li>Library</li>
+            <li>Release Notes</li>
+          </ul>
+        </div>
+        <div class="help">
+          <h2>HELP</h2>
+          <ul class="help-list">
+            <li>My Account</li>
+            <li>Support Docs</li>
+            <li>Contact Us</li>
+            <li>Feature Requests</li>
+          </ul>
+        </div>
+        <div class="company">
+          <h2>COMPANY</h2>
+          <ul class="company-list">
+            <li>Press Releases</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policie</li>
+            <li>Security Overview</li>
+            <li>Status</li>
+            <li>Terms of Service</li>
+            <li>Code of Conduct</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
