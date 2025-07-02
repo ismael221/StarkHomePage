@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -7,15 +7,8 @@
     <style>
       body {
         margin: 0;
-        font-family:
-          ui-monospace,
-          SFMono-Regular,
-          Menlo,
-          Monaco,
-          Consolas,
-          Liberation Mono,
-          Courier New,
-          monospace;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          Liberation Mono, Courier New, monospace;
       }
       ul {
         list-style: none;
@@ -103,8 +96,7 @@
       .article-card {
         width: 250px;
         height: 200px;
-        box-shadow:
-          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
           rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         padding: 30px;
         border-radius: 20px;
@@ -140,8 +132,22 @@
         align-items: center;
       }
 
-      .company-list{
+      .company-list {
         margin: 0;
+      }
+
+      .btn-submit {
+        border: none;
+        background-color: #381fd1;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        width: 100%;
+        font-weight: 600;
+      }
+
+      .aside-nav li a{
+        text-decoration: none;
       }
     </style>
   </head>
@@ -167,7 +173,7 @@
         <div class="aside-content">
           <h4>Search Library</h4>
           <input type="search" />
-          <ul>
+          <ul class="aside-nav">
             <li><a href="">Home</a></li>
             <li><a href="">Collections</a></li>
             <li><a href="">Categories</a></li>
@@ -177,7 +183,7 @@
               <h2>Contribuite to Stark</h2>
             </div>
             <p>Got any accessibility resources or news?</p>
-            <button>Submit a Resource</button>
+            <button class="btn-submit">Submit a Resource</button>
           </div>
         </div>
       </aside>
