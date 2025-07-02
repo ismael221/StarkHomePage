@@ -9,6 +9,8 @@
         margin: 0;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
           Liberation Mono, Courier New, monospace;
+        scroll-behavior: smooth;
+        color: #11284b;
       }
       ul {
         list-style: none;
@@ -18,6 +20,7 @@
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
       }
 
       .item {
@@ -38,6 +41,7 @@
         justify-content: flex-end;
         align-items: flex-start;
         padding-left: 80px;
+        margin-bottom: 50px;
       }
 
       aside {
@@ -88,7 +92,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-content: center;
-        align-items: baseline;
+        align-items: center;
         gap: 40px;
         max-width: 1200px;
       }
@@ -146,20 +150,184 @@
         font-weight: 600;
       }
 
-      .aside-nav li a{
+      .aside-nav li a {
         text-decoration: none;
+      }
+
+      footer > * {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+      }
+
+      .list {
+        padding: 0;
+      }
+
+      .category-title {
+        font-size: 1rem;
+      }
+      .second-card {
+        width: 250px;
+        height: 300px;
+
+        img {
+          height: auto;
+          max-width: 100%;
+          padding-top: 120px;
+          border-radius: 10px;
+        }
+      }
+
+      .disability {
+        background-color: #f6f6eb;
+        border-radius: 10px;
+      }
+
+      .accessible {
+        background-color: #f3f2fc;
+        border-radius: 10px;
+      }
+
+      .inclusive {
+        background-color: #f6f6eb;
+        border-radius: 10px;
+      }
+
+      .second {
+        padding-bottom: 90px;
+      }
+
+      .second-card h2 {
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 20px;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .image-container {
+        position: relative;
+        text-align: left;
+
+        h2 {
+          position: absolute;
+        }
+      }
+
+      .second .article-content {
+        align-items: flex-end;
+      }
+
+      input {
+        border-radius: 5px;
+        height: 40px;
+        width: 100%;
+        border: 2px solid rgb(184, 183, 183);
+        padding-left: 40px;
+      }
+
+      .input-icons {
+        width: 100%;
+        position: relative;
+      }
+
+      i {
+        position: absolute;
+        padding: 10px;
+
+        .search-icon {
+          width: 80%;
+        }
+      }
+
+      .aside-nav {
+        padding-left: 20px;
+      }
+
+      .aside-nav li a {
+        color: #11284b;
+        font-weight: bold;
+      }
+
+      .aside-nav li a:hover {
+        color: #381fd1;
+      }
+
+      .aside-nav li {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+      h1 {
+        padding-top: 60px;
+        font-size: 50px;
+        text-align: left;
+      }
+
+      footer .container {
+        padding-bottom: 80px;
+        padding-top: 80px;
+      }
+
+      .subtitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+
+        span {
+          padding-right: 70px;
+        }
+
+        h2 {
+          margin-bottom: 0;
+        }
+      }
+
+      .icon {
+        width: 35px;
+        height: auto;
+      }
+
+      .hovering:hover {
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid blue;
+      }
+
+      .resource-img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgb(215, 213, 213);
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     </style>
   </head>
   <body>
     <nav>
       <ul class="nav-container">
-        <li class="item">PRODUCT</li>
-        <li class="item">PRICING</li>
-        <li class="item">BLOG</li>
-        <li class="item">LIBRARY</li>
-        <li class="item">SUPPORT</li>
-        <li class="item">LOG IN</li>
+        <li class="item icon">
+          <img src="./assets/icon.png" alt="" class="icon" />
+        </li>
+        <li class="item hovering">PRODUCT</li>
+        <li class="item hovering">PRICING</li>
+        <li class="item hovering">BLOG</li>
+        <li class="item hovering">LIBRARY</li>
+        <li class="item hovering">SUPPORT</li>
+        <li class="item hovering">LOG IN</li>
         <li class="item">
           <button class="free-trial">
             <a class="link-button">30-DAY FREE TEAM TRIAL</a>
@@ -172,7 +340,10 @@
       <aside>
         <div class="aside-content">
           <h4>Search Library</h4>
-          <input type="search" />
+          <div class="input-icons">
+            <i><img src="./assets/search.png" alt="" class="search-icon" /></i>
+            <input type="search" />
+          </div>
           <ul class="aside-nav">
             <li><a href="">Home</a></li>
             <li><a href="">Collections</a></li>
@@ -180,7 +351,7 @@
           </ul>
           <div class="contribuite-card">
             <div class="contribuite-title">
-              <h2>Contribuite to Stark</h2>
+              <h2>Contribute to Stark</h2>
             </div>
             <p>Got any accessibility resources or news?</p>
             <button class="btn-submit">Submit a Resource</button>
@@ -190,51 +361,65 @@
 
       <article class="first">
         <div class="article-title">
-          <h2>New in the Library</h2>
-          <span><a href="#">VIEW ALL</a></span>
+          <div class="subtitle">
+            <h2>New in the Library</h2>
+            <span><a href="#">VIEW ALL</a></span>
+          </div>
           <p>Newly added accessibility resources, guides and more.</p>
         </div>
         <div class="article-content">
-          <div class="article-card">
+          <div class="article-card first">
             <div class="card-content">
-              <img src="" alt="" />
+              <div class="resource-img">
+                <img src="./assets/daisy_high.jpg" alt="" />
+              </div>
               <h3>RESOURCES</h3>
               <h2>Inclusive Publishing</h2>
             </div>
           </div>
           <div class="article-card">
-            <div class="card-content">
-              <img src="" alt="" />
+            <div class="card-content first">
+              <div class="resource-img">
+                <img src="./assets/apln.png" alt="" />
+              </div>
               <h3>RESOURCES</h3>
               <h2>The APLN (Accessible Publishing...)</h2>
             </div>
           </div>
           <div class="article-card">
-            <div class="card-content">
-              <img src="" alt="" />
+            <div class="card-content first">
+              <div class="resource-img">
+                <img src="./assets/uni.jpg" alt="" />
+              </div>
               <h3>RESOURCES</h3>
-              <h2>Inclusive Publishing</h2>
+              <h2>Making Accessible Books</h2>
             </div>
           </div>
           <div class="article-card">
-            <div class="card-content">
-              <img src="" alt="" />
+            <div class="card-content first">
+              <div class="resource-img">
+                <img src="./assets/daisy_high.jpg" alt="" />
+              </div>
               <h3>RESOURCES</h3>
-              <h2>Inclusive Publishing</h2>
+              <h2>The DAISY Consorium's Accessible...</h2>
             </div>
           </div>
           <div class="article-card">
-            <div class="card-content">
-              <img src="" alt="" />
+            <div class="card-content first">
+              <div class="resource-img">
+                <img src="./assets/language_please_logo.png" alt="" />
+              </div>
               <h3>RESOURCES</h3>
-              <h2>Inclusive Publishing</h2>
+              <h2>Language,Please: Style Guide & Resources for...</h2>
             </div>
           </div>
           <div class="article-card">
-            <div class="card-content">
-              <img src="" alt="" />
+            <div class="card-content first">
+              <div class="resource-img">
+                <img src="./assets/google.png" alt="" />
+              </div>
               <h3>BLOGS & ARTICLES</h3>
-              <h2>Inclusive Publishing</h2>
+              <h2>4 steps to more inclusive, precise language</h2>
             </div>
           </div>
         </div>
@@ -242,20 +427,53 @@
 
       <article class="second">
         <div class="article-title">
-          <h2>Featured Collections</h2>
-          <span><a href="#">VIEW ALL</a></span>
+          <div class="subtitle">
+            <h2>Featured Collections</h2>
+            <span><a href="#">VIEW ALL</a></span>
+          </div>
           <p>Handpicked and curated collections around accessibility</p>
         </div>
-        <div class="article-content"></div>
+        <div class="article-content">
+          <div class="card-content second-card disability">
+            <div class="image-container">
+              <h2>Disability Employment</h2>
+              <img
+                class="img-1"
+                src="./assets/Disability_Employment.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-content second-card accessible">
+            <div class="image-container">
+              <h2>Making Accessible Color Combos</h2>
+              <img
+                class="img-2"
+                src="./assets/making_accessible_color_combos.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-content second-card inclusive">
+            <div class="image-container">
+              <h2>Tips and Tricks for Inclusive Social Media</h2>
+              <img
+                class="img-3"
+                src="./assets/Inclusive_Social_Media.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </article>
     </main>
 
     <footer>
-      <h1>Made remotely with love by Stark Lab, Inc.</h1>
+      <h1>Made remotely with love by Ismael Nunes Campos</h1>
       <div class="container">
         <div class="product">
-          <h2>PRODUCT</h2>
-          <ul class="product-list">
+          <h2 class="category-title">PRODUCT</h2>
+          <ul class="product-list list">
             <li>Stark for Figma</li>
             <li>Stark for FigJam</li>
             <li>Stark for Sketch</li>
@@ -268,16 +486,16 @@
           </ul>
         </div>
         <div class="resources">
-          <h2>RESOURCES</h2>
-          <ul class="resources-list">
+          <h2 class="category-title">RESOURCES</h2>
+          <ul class="resources-list list">
             <li>Blog</li>
             <li>Library</li>
             <li>Release Notes</li>
           </ul>
         </div>
         <div class="help">
-          <h2>HELP</h2>
-          <ul class="help-list">
+          <h2 class="category-title">HELP</h2>
+          <ul class="help-list list">
             <li>My Account</li>
             <li>Support Docs</li>
             <li>Contact Us</li>
@@ -285,8 +503,8 @@
           </ul>
         </div>
         <div class="company">
-          <h2>COMPANY</h2>
-          <ul class="company-list">
+          <h2 class="category-title">COMPANY</h2>
+          <ul class="company-list list">
             <li>Press Releases</li>
             <li>Privacy Policy</li>
             <li>Cookie Policie</li>
